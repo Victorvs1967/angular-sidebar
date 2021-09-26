@@ -1,0 +1,29 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button (click)="sidenav.toggle()" class="menu-button" fxHide fxShow.lt-md>
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span [ngClass]="{ 'hidden': opened ? false : true }">SideNav</span>
+  <span></span>
+  <span class="head-menu"></span>
+  <div class="row">
+    <button mat-button (click)="signout()">
+      <mat-icon>logout</mat-icon> Sign Out
+    </button>
+  </div>
+</mat-toolbar>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav [mode]="opened === false ? 'over' : 'side'" [opened]="opened === true">
+    <mat-nav-list>
+      <div style="text-align: center;">
+        <img src="https://source.unsplash.com/c_GmwfHBDzk/200x200" alt="avatar" class="avatar mat-elevation=z8" />
+        <h4 class="name text-resposive">John Doe</h4>
+        <p class="destination">Admin</p>
+        <mat-divider></mat-divider>
+      </div>
+      <app-menu-list-item *ngFor="let item of menu" [item]="item"></app-menu-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
