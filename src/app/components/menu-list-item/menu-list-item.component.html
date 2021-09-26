@@ -1,8 +1,4 @@
-<a mat-list-item [ngStyle]="{'padding-left': (depth * 12) + 'px'}" 
-  class="menu-list-item" 
-  routerLink="{{ item.route }}" 
-  routerLinkActive="is-active">
-  
+<a mat-list-item [ngStyle]="{'padding-left': (depth * 12) + 'px'}" class="menu-list-item" routerLink="{{ item.route }}" routerLinkActive="is-active"> 
   <mat-icon class="routeIcon text-responsive">{{ item.iconName }}</mat-icon>
   <span class="text-responsive">{{ item.displayName }}</span>
   <span class="twistie-separator"></span>

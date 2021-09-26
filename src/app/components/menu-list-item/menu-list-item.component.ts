@@ -30,7 +30,7 @@ export class MenuListItemComponent implements OnInit {
 
   constructor(public navService: NavService, public router: Router, private dialog: MatDialog) { 
     if (this.depth === undefined) {
-      this.depth = 0;
+      this.depth = 2;
     }
   }
 
