@@ -12,8 +12,18 @@ export let menu: NavItem[] = [
     route: 'profile'
   },
   {
+    displayName: 'Projects',
+    iconName: 'collections',
+    route: 'projects'
+  },
+  {
     displayName: 'About',
     iconName: 'info',
     route: 'about'
+  },
+  {
+    displayName: 'Contact',
+    iconName: 'contact_mail',
+    route: 'contact'
   }
 ];
