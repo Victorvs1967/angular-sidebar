@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { LayoutModule } from '@angular/cdk/layout';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +20,7 @@ import { MenuListItemComponent } from './components/menu-list-item/menu-list-ite
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialUiModule,
+    LayoutModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
