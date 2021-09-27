@@ -1,1 +1,18 @@
-<p>projects works!</p>
+<!-- project section -->
+<section class="project" id="project-section">
+  <h2 class="heading">project<span class="highlight">s</span></h2>
+  <p class="sub-heading">Lorem ipsum dolor sit amet consectetur.</p>
+  <div class="separator"></div>
+  <div class="filters">
+    <button *ngFor="let skill of skills" class="filter-btn" id="{{skill}}" (click)="filterBtn($event)">{{ skill }}</button>
+  </div>     
+  <div class="project-container">
+    <div class="project-card {{ project.display }}" *ngFor="let project of projects">
+      <img src="assets/img/{{ project.image }}" alt="image">
+      <div class="content">
+        <h1 class="project-name"> {{ project.name }} </h1>
+        <span class="tags"> {{ project.tags }} </span>
+      </div>
+    </div>
+  </div>
+</section>
