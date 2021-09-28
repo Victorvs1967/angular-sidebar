@@ -8,18 +8,21 @@ import { projects } from 'src/app/models/projects';
 })
 export class ProjectsComponent implements OnInit {
 
-  skills = ['all', 'javascript', 'ui', 'backend', 'frontend'];
-
-  id: string | undefined;
+  skills = [
+    'all',
+    'javascript',
+    'ui',
+    'backend',
+    'frontend',
+  ];  
+  projects = projects;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  public projects: any = projects;
-
-   // filter button
+  // filter button
   filterBtn(event: any) {
     const projectCards = projects;
     projectCards.forEach(card => {

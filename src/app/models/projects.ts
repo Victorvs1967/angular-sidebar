@@ -17,4 +17,4 @@ export const projects = [
         image: "project3.png",
         display: ""
     },
-]
+];
